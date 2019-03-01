@@ -3,10 +3,8 @@
 //Вызовите эту функцию с аргументами 10, false, "google"
 
 function smallFunct () {
-	console.log ( arguments.callee )
-	for ( var i = 0;  i < arguments.length;  i++ ) {
-		console.log ( arguments[i] )
-	}
+	console.log(arguments.callee),
+	console.log(Array.from(arguments))
 };
 
 smallFunct(10, false, "google");
@@ -31,7 +29,7 @@ function userInfo () {
 		console.log( "Дата регистрации: " + this.data );
 	} else {
 		console.log( "Незарегистрированный пользователь: " + this.name );
-	}
+	    }
 };
 
 var userWoman = {

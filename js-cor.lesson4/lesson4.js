@@ -117,3 +117,20 @@ books [5].getBookInfo()
 books [5].returnBook()
 books [5].getBookInfo()
 
+/* Дополнительно ( 5 баллов )
+Объявите конструктор, который создает экземпляры с унаследованным методом addProperty
+Метод addProperty должен принимать два аргумента:
+-имя свойства
+-значение свойства
+и добавлять экземпляру новое свойство с указанным именем и значением
+*/
+
+function HusbandWife () {}
+    HusbandWife.prototype.addProperty = function (name, value) {
+        this[name] = value;
+    };
+
+var HusbandWife = new HusbandWife ()
+HusbandWife.addProperty('husband','Cергей')
+HusbandWife.addProperty('wife','Марина')
+console.log(HusbandWife)

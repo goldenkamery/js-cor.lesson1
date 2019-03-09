@@ -14,7 +14,7 @@ var womanBag = {
 	documents: 'passport',
 
 	getThingInBag: function (thing) {
-			      var thing = prompt ( "Что достаем из сумки?" );
+			      var thing = prompt ( "Что достаем из сумки: cosmetics, phone, accessories, keys, documents?" );
                               thing in womanBag ? delete womanBag[thing] : alert("В сумке такого нет");
                         },
 

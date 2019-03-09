@@ -65,4 +65,55 @@ console.log(womanBag);
 Запросите экземпляр от имени ... ( любое имя ) */
 
 var LibraryBook = function ( title = "Без названия", year = "нет данных", author = "нет данных" ) {
+                     var title = title
+                     var year = year
+                     var author = author
+                     var readerName = null
+                     var readerData = null
+
+
+		     function giveTheBook ( client, data = new Date() ) {
+                           readerName = client
+                           readerData = data
+                     }
+
+
+		     this.getBookInfo = function () {
+                		            var text = readerName ? "выдана на руки" : "есть в наличии"
+                		            console.info ( `${author}, ${title} (${year}): ${text}` )
+                                        }
+
+
+                     this.getTheBook = function ( client, data ) {
+                                          if ( readerName ) {
+                                                this.getBookInfo ()
+                                                return null
+                                          } else {
+                                              giveTheBook ( client, data )
+                                              return {
+                                                    title: title,
+                                                    year: year,
+                                                    author: author
+                                              }
+                                            }
+                                       }
+
+
+                     this.returnBook = function () {
+                                         readerName = null
+                                         readerData = null
+                                       }
+                 }
+var books = []
+books [0] = new LibraryBook ( "JavaScript. Библия пользователя", "2006", "Майкл Моррисон" )
+books [1] = new LibraryBook ( "JavaScript: Подробное руководство", "2008", "David Flanagan" )
+books [5] = new LibraryBook ( "Pro Javascript Techniques", "2006", "John Resig" )
+
+console.log ( books )
+
+books [5].getBookInfo()
+books [5].getTheBook( "Марина Каменева", new Date ( 2019, 3, 08 ) )
+books [5].getBookInfo()
+books [5].returnBook()
+books [5].getBookInfo()
 

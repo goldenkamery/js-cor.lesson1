@@ -14,15 +14,15 @@ var womanBag = {
 	documents: 'passport',
 
 	getThingInBag: function (thing) {
-						var thing = prompt ( "Что достаем из сумки?" );
-                        thing in womanBag ? delete womanBag[thing] : alert("В сумке такого нет");
-                   },
+			      var thing = prompt ( "Что достаем из сумки?" );
+                              thing in womanBag ? delete womanBag[thing] : alert("В сумке такого нет");
+                        },
 
 	setThingInBag: function (thing1, subject) {
-						var thing1 = prompt ( "Что кладем в сумкy?" );
-						var subject =  prompt ( "Какой предмет?" )
-						womanBag[thing1] = subject;
-                   },
+			        var thing1 = prompt ( "Что кладем в сумкy?" );
+				var subject =  prompt ( "Какой предмет?" )
+				womanBag[thing1] = subject;
+                       },
 };
 
 

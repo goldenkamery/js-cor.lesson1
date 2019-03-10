@@ -15,14 +15,16 @@ var womanBag = {
 
 	getThingInBag: function (thing) {
 			      var thing = prompt ( "Что достаем из сумки: cosmetics, phone, accessories, keys, documents?" );
-                              thing in womanBag ? delete womanBag[thing] : alert("В сумке такого нет");
-                        },
+                              alert ("Мы достали: " + womanBag[thing]);
+                              thing in womanBag ? delete womanBag[thing] : alert ("В сумке такого нет")
+                     },
 
 	setThingInBag: function (thing1, subject) {
-			        var thing1 = prompt ( "Что кладем в сумкy?" );
-				var subject =  prompt ( "Какой предмет?" )
-				womanBag[thing1] = subject;
-                       },
+			            var thing1 = prompt ( "Что кладем в сумкy?" );
+				    var subject = prompt ( "Какой предмет?" );
+				    womanBag[thing1] = subject
+			            alert ("Мы положили: " + womanBag[thing1]);
+                     },
 };
 
 

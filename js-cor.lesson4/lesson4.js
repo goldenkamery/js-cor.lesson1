@@ -15,8 +15,8 @@ var womanBag = {
 
 	getThingInBag: function (thing) {
 			      var thing = prompt ( "Что достаем из сумки: cosmetics, phone, accessories, keys, documents?" );
-                              alert ("Мы достали: " + womanBag[thing]);
-                              thing in womanBag ? delete womanBag[thing] : alert ("В сумке такого нет")
+                              thing in womanBag ? alert ("Мы достали: " + womanBag[thing]) : alert ("В сумке такого нет");
+                              delete womanBag[thing] 
                      },
 
 	setThingInBag: function (thing1, subject) {

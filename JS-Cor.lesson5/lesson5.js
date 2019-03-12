@@ -107,4 +107,3 @@ function testArguments () {
 }
 
 testArguments ( "Google" )
-

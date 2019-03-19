@@ -163,7 +163,7 @@ var tags = [ "header", "footer", "main", "div", "p" ]
 
 Подсказка: используйте методы объекта classList */
 
-
+/*
 var style = document.head.appendChild(document.createElement('style'));
 style.textContent = `.redBack {
    background-color: red!important;
@@ -172,3 +172,4 @@ style.textContent = `.redBack {
 for (var elem of document.body.children) {
   elem.tagName === 'SCRIPT'? null : elem.className = 'redBack';
  };
+*/

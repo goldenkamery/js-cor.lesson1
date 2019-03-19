@@ -11,7 +11,7 @@
 
 Итерируйте массив tags, создавая соответствующие элементы и вставляя их на страницу, добавляя каждому элементу класс из массива classes */
 
-
+/*
 var tags = [ "header", "footer", "main", "div", "section" ];
 var classes = [ 'laptop', 'lipa', 'home', 'terrible', 'detective'];
 var style = document.head.appendChild(document.createElement('style'));
@@ -55,7 +55,7 @@ for ( var t in tags ) {
 Таким образом, массив classes нам уже не нужен, но кроме стилизации элементов нужно еще добавить их контент, 
 используя как атрибуты тегов, так и свойства элементов DOM */
 
-
+/*
 var tags = [
     {
         name: 'header',

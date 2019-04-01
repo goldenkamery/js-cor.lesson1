@@ -77,9 +77,9 @@ function clickHandler ( event ) {
 [ "first", "second", "third", "fourth" ].forEach (
     function ( tag, index, arr  ) {
         var elem = ( index ? 
-					 collection [ index - 1 ] :
-					 document.body )
-			.appendChild(document.createElement('div') )
+			collection [ index - 1 ] :
+			document.body )
+	    .appendChild ( document.createElement('div') )
         collection.push ( elem )
         elem.style = `
             width:  ${( arr.length - index ) * 100}px;
@@ -131,9 +131,9 @@ function clickHandler ( event ) {
 [ 1, 2, 3, 4, 5, 6, 7 ].forEach (
     function ( tag, index, arr  ) {
         var elem = ( index ? 
-					 collection [ index - 1 ] :
-					 document.body )
-		 .appendChild( document.createElement('div') )
+		  collection [ index - 1 ] :
+		  document.body )
+	    .appendChild ( document.createElement('div') )
         collection.push ( elem )
         elem.style = `
             width:  ${( arr.length - index ) * 100}px;

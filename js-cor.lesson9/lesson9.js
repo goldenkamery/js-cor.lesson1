@@ -77,3 +77,32 @@ users.showPresent()
 Иван
 Степан
 Михаил */
+
+
+var users = (
+    function ( list ) {
+        var users = []
+        for ( var user of list )
+            users.push ({
+                name: user,
+                present: false
+            })
+
+        return {
+            setUserPresent ( userName, present ) {
+                users.filter ( user => user.name === userName )[0].present = true
+            },
+            showPresent () {
+                users.filter ( user => user.present )
+                    .forEach ( user => console.log ( user ) )
+            },
+            showAbsent () {
+                users.filter ( user => !user.present )
+                    .forEach ( user => console.log ( user ) )
+            }
+        }
+    }
+)( [ "Иван", "Дмитрий", "Степан", "Михаил" ] )
+
+users.showAbsent()
+

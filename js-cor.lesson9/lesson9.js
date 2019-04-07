@@ -106,6 +106,12 @@ var users = (
 
 users.showAbsent()
 
+users.setUserPresent( "Иван", "+" )
+users.setUserPresent( "Михаил", "присутствовал" )
+users.setUserPresent( "Степан", true )
+
+users.showPresent()
+
 
 
 /* Additionally :thumbsup:

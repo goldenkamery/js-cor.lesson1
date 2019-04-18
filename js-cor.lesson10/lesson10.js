@@ -59,3 +59,35 @@ getKey = () => {
 }
 На случай, если два сообщения поступят одновременно, функция getKey добавляет "[2]" к значению ключа 
 ( иначе значения ключей двух сообщений будут совпадать ) */
+
+let messages = [
+    "backspace",
+    "enter",
+    "shift",
+    "control",
+    "delete",
+    "space",
+    "subtract"
+]
+
+var log = {}
+
+var sendMessage = ( message, callback ) => 
+    setTimeout (
+        () => callback ( message ),
+        Math.random () * 7000
+    )
+
+var handler = message => {
+    Object.assign(log,
+        {[getKey()] : message}
+    )
+}
+messages.forEach (
+    message => sendMessage ( message, handler )
+)
+
+getKey = () => {
+    var key = new Date().toLocaleString().split(", ")[1]
+    return log [ key ] ? key + "[2]" : key
+}

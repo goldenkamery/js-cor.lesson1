@@ -93,8 +93,35 @@ getKey = () => {
     return log [ key ] ? key + "[2]" : key
 }
 
-loadData ( lesson10.js ).then (
-	response => document.body.appendChild (
-		document.createElement ( 'pre' ).innerText = response
-	)
-)
+// Второй вариант
+
+let messages = [
+    "backspace",
+    "enter",
+    "shift",
+    "control",
+    "delete",
+    "space",
+    "subtract"
+];
+
+var log = {};
+
+var sendMessage = ( message, callback ) => 
+    setTimeout (
+        () => callback ( message ),
+        Math.random () * 7000
+    )
+
+var handler = message => {
+    	log [ getKey() ] = message 
+};
+
+messages.forEach (
+    message => sendMessage ( message, handler )
+);
+
+getKey = () => {
+    var key = new Date().toLocaleString().split(", ")[1]
+    return log [ key ] ? key + "[2]" : key
+}

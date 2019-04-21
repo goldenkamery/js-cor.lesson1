@@ -60,6 +60,10 @@ getKey = () => {
 На случай, если два сообщения поступят одновременно, функция getKey добавляет "[2]" к значению ключа 
 ( иначе значения ключей двух сообщений будут совпадать ) */
 
+
+
+// Первый вариант
+
 let messages = [
     "backspace",
     "enter",
@@ -93,6 +97,8 @@ getKey = () => {
     return log [ key ] ? key + "[2]" : key
 }
 
+
+
 // Второй вариант
 
 let messages = [
@@ -121,7 +127,34 @@ messages.forEach (
     message => sendMessage ( message, handler )
 );
 
+
+
+
+
+/* Additionally :ok_hand:
+Допилите код конструктора User, дополнив его акцессорами приватного свойства presence так, чтобы после выполнения скрипта:
+
+function User ( name ) {
+    this.name = name
+    var presence = false
+    ...
+}
+
+let user = new User ( "Ivan" )
+console.info ( user.presence )
+в консоли было:
+
+"Ivan is absent"
+а после выполнения кода:
+
+user.presence = "+"
+console.info ( user.presence )
+в консоли было:
+
+"Ivan is present"
 getKey = () => {
     var key = new Date().toLocaleString().split(", ")[1]
     return log [ key ] ? key + "[2]" : key
-}
+} */
+
+

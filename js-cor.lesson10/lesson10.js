@@ -68,9 +68,9 @@ let messages = [
     "delete",
     "space",
     "subtract"
-]
+];
 
-var log = {}
+var log = {};
 
 var sendMessage = ( message, callback ) => 
     setTimeout (
@@ -79,15 +79,22 @@ var sendMessage = ( message, callback ) =>
     )
 
 var handler = message => {
-    Object.assign(log,
-        {[getKey()] : message}
+    Object.assign ( log,
+        { [ getKey() ] : message }
     )
-}
+};
+
 messages.forEach (
     message => sendMessage ( message, handler )
-)
+);
 
 getKey = () => {
     var key = new Date().toLocaleString().split(", ")[1]
     return log [ key ] ? key + "[2]" : key
 }
+
+loadData ( lesson10.js ).then (
+	response => document.body.appendChild (
+		document.createElement ( 'pre' ).innerText = response
+	)
+)

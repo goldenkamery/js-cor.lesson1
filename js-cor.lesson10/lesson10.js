@@ -127,7 +127,10 @@ messages.forEach (
     message => sendMessage ( message, handler )
 );
 
-
+getKey = () => {
+    var key = new Date().toLocaleString().split(", ")[1]
+    return log [ key ] ? key + "[2]" : key
+}
 
 
 

@@ -169,9 +169,8 @@ function User ( name ) {
             presence ? 
                 `${this.name} is present` : 
                     `${this.name} is absent`,
-
-        set: newValue => presence = newValue 
-			 
+        set: newVal =>
+            presence = Boolean ( newVal ) 
     })
 }
 

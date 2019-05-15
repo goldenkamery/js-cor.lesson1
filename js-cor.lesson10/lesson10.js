@@ -99,9 +99,9 @@ getKey = () => {
 
 
 
-// Второй вариант
+// ВТОРОЙ ВАРИАНТ
 
-let messages = [
+/* let messages = [
     "backspace",
     "enter",
     "shift",
@@ -130,7 +130,7 @@ messages.forEach (
 getKey = () => {
     var key = new Date().toLocaleString().split(", ")[1]
     return log [ key ] ? key + "[2]" : key
-}
+} */
 
 
 

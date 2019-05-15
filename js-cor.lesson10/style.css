@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url(https://99px.ru/sstorage/53/2011/06/tmb_15493_3149.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+h3 {
+    padding: 30px;
+    text-align: center;
+    color: #000000;
+}
